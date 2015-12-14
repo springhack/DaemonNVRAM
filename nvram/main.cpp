@@ -15,7 +15,7 @@ void sigroutine(int dunno)
 {
     printf("%s\n", "SpringHack");
     system("nvram -x -p > /Extra/nvram.plist");
-    kill(getpid(), SIGKILL);
+    //kill(getpid(), SIGKILL);
     return;
 }
 
