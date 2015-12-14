@@ -216,7 +216,7 @@ void DaemonNVRAM::timeoutOccurred(OSObject *target, IOTimerEventSource* timer)
         IOLog("DaemonNVRAM: sync to file /Extra/NVRAM/nvram.plist\n");
         self->sync();
     }
-    timer->setTimeoutMS(30000);
+    timer->setTimeoutMS(180000);
 }
 
 void DaemonNVRAM::stop(IOService *provider)
