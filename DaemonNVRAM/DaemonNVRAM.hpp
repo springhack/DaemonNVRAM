@@ -11,6 +11,13 @@
 
 #include "FileIO.h"
 
+
+
+//Define this so we can't see logs
+#define SPRINGHACK
+
+
+
 #define private public
 
 #define kNVRAMSyncCommand   1
@@ -24,6 +31,10 @@
 #define NVRAM_FILE_FOOTER       "</plist>\n"
 #define NVRAM_MISS_KEY			"NVRAM_MISS"
 #define NVRAM_MISS_HEADER       "\n<key>NVRAM_MISS</key>\n"
+
+#ifdef  SPRINGHACK
+#define IOLog(fmt, args...)
+#endif
 
 class DaemonNVRAM : public IOService {
     
