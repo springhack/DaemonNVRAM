@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>nvram.xcscheme</key>
+		<key>DaemonNVRAM.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>ED114A7F1C1E80EB00AADCC3</key>
+		<key>ED3ED7171C1FA7F2005AE413</key>
 		<dict>
 			<key>primary</key>
 			<true/>

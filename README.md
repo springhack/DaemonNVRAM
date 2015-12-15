@@ -1,6 +1,5 @@
 #DaemonNVRAM
 
-####1. Copy com.springhack.nvram.plist to /Library/LaunchDaemons.
-####2. Build nvram and copy binary to /Extra.
-####3. Change permissions.
-####4. Have fun!
+####1. Change to root.
+####2. run 'install.sh intall' to install.
+####3. Have fun!

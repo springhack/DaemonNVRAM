@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "ED114A7F1C1E80EB00AADCC3"
-               BuildableName = "nvram"
-               BlueprintName = "nvram"
-               ReferencedContainer = "container:nvram.xcodeproj">
+               BlueprintIdentifier = "ED3ED7171C1FA7F2005AE413"
+               BuildableName = "DaemonNVRAM.kext"
+               BlueprintName = "DaemonNVRAM"
+               ReferencedContainer = "container:DaemonNVRAM.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -29,15 +29,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "ED114A7F1C1E80EB00AADCC3"
-            BuildableName = "nvram"
-            BlueprintName = "nvram"
-            ReferencedContainer = "container:nvram.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -51,16 +42,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "ED114A7F1C1E80EB00AADCC3"
-            BuildableName = "nvram"
-            BlueprintName = "nvram"
-            ReferencedContainer = "container:nvram.xcodeproj">
+            BlueprintIdentifier = "ED3ED7171C1FA7F2005AE413"
+            BuildableName = "DaemonNVRAM.kext"
+            BlueprintName = "DaemonNVRAM"
+            ReferencedContainer = "container:DaemonNVRAM.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -70,16 +60,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "ED114A7F1C1E80EB00AADCC3"
-            BuildableName = "nvram"
-            BlueprintName = "nvram"
-            ReferencedContainer = "container:nvram.xcodeproj">
+            BlueprintIdentifier = "ED3ED7171C1FA7F2005AE413"
+            BuildableName = "DaemonNVRAM.kext"
+            BlueprintName = "DaemonNVRAM"
+            ReferencedContainer = "container:DaemonNVRAM.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

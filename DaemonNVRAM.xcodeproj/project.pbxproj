@@ -1,0 +1,282 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ED3ED71C1C1FA7F2005AE413 /* DaemonNVRAM.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ED3ED71B1C1FA7F2005AE413 /* DaemonNVRAM.hpp */; };
+		ED3ED71E1C1FA7F2005AE413 /* DaemonNVRAM.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED3ED71D1C1FA7F2005AE413 /* DaemonNVRAM.cpp */; };
+		ED84BD981C1FBA0900A3B7A2 /* FileIO.c in Sources */ = {isa = PBXBuildFile; fileRef = ED84BD961C1FBA0900A3B7A2 /* FileIO.c */; };
+		ED84BD991C1FBA0900A3B7A2 /* FileIO.h in Headers */ = {isa = PBXBuildFile; fileRef = ED84BD971C1FBA0900A3B7A2 /* FileIO.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		ED3ED7181C1FA7F2005AE413 /* DaemonNVRAM.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DaemonNVRAM.kext; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED3ED71B1C1FA7F2005AE413 /* DaemonNVRAM.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DaemonNVRAM.hpp; sourceTree = "<group>"; };
+		ED3ED71D1C1FA7F2005AE413 /* DaemonNVRAM.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DaemonNVRAM.cpp; sourceTree = "<group>"; };
+		ED3ED71F1C1FA7F2005AE413 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED84BD961C1FBA0900A3B7A2 /* FileIO.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = FileIO.c; sourceTree = "<group>"; };
+		ED84BD971C1FBA0900A3B7A2 /* FileIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileIO.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ED3ED7141C1FA7F2005AE413 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ED3ED70E1C1FA7F2005AE413 = {
+			isa = PBXGroup;
+			children = (
+				ED3ED71A1C1FA7F2005AE413 /* DaemonNVRAM */,
+				ED3ED7191C1FA7F2005AE413 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ED3ED7191C1FA7F2005AE413 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ED3ED7181C1FA7F2005AE413 /* DaemonNVRAM.kext */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ED3ED71A1C1FA7F2005AE413 /* DaemonNVRAM */ = {
+			isa = PBXGroup;
+			children = (
+				ED84BD961C1FBA0900A3B7A2 /* FileIO.c */,
+				ED84BD971C1FBA0900A3B7A2 /* FileIO.h */,
+				ED3ED71B1C1FA7F2005AE413 /* DaemonNVRAM.hpp */,
+				ED3ED71D1C1FA7F2005AE413 /* DaemonNVRAM.cpp */,
+				ED3ED71F1C1FA7F2005AE413 /* Info.plist */,
+			);
+			path = DaemonNVRAM;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		ED3ED7151C1FA7F2005AE413 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED84BD991C1FBA0900A3B7A2 /* FileIO.h in Headers */,
+				ED3ED71C1C1FA7F2005AE413 /* DaemonNVRAM.hpp in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		ED3ED7171C1FA7F2005AE413 /* DaemonNVRAM */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED3ED7221C1FA7F2005AE413 /* Build configuration list for PBXNativeTarget "DaemonNVRAM" */;
+			buildPhases = (
+				ED3ED7131C1FA7F2005AE413 /* Sources */,
+				ED3ED7141C1FA7F2005AE413 /* Frameworks */,
+				ED3ED7151C1FA7F2005AE413 /* Headers */,
+				ED3ED7161C1FA7F2005AE413 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DaemonNVRAM;
+			productName = DaemonNVRAM;
+			productReference = ED3ED7181C1FA7F2005AE413 /* DaemonNVRAM.kext */;
+			productType = "com.apple.product-type.kernel-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ED3ED70F1C1FA7F2005AE413 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = SpringHack;
+				TargetAttributes = {
+					ED3ED7171C1FA7F2005AE413 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+				};
+			};
+			buildConfigurationList = ED3ED7121C1FA7F2005AE413 /* Build configuration list for PBXProject "DaemonNVRAM" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = ED3ED70E1C1FA7F2005AE413;
+			productRefGroup = ED3ED7191C1FA7F2005AE413 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ED3ED7171C1FA7F2005AE413 /* DaemonNVRAM */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ED3ED7161C1FA7F2005AE413 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ED3ED7131C1FA7F2005AE413 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED3ED71E1C1FA7F2005AE413 /* DaemonNVRAM.cpp in Sources */,
+				ED84BD981C1FBA0900A3B7A2 /* FileIO.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		ED3ED7201C1FA7F2005AE413 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		ED3ED7211C1FA7F2005AE413 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		ED3ED7231C1FA7F2005AE413 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1.0.0d1;
+				INFOPLIST_FILE = DaemonNVRAM/Info.plist;
+				MODULE_NAME = com.springhack.DaemonNVRAM;
+				MODULE_VERSION = 1.0.0d1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.springhack.DaemonNVRAM;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = kext;
+			};
+			name = Debug;
+		};
+		ED3ED7241C1FA7F2005AE413 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1.0.0d1;
+				INFOPLIST_FILE = DaemonNVRAM/Info.plist;
+				MODULE_NAME = com.springhack.DaemonNVRAM;
+				MODULE_VERSION = 1.0.0d1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.springhack.DaemonNVRAM;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = kext;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ED3ED7121C1FA7F2005AE413 /* Build configuration list for PBXProject "DaemonNVRAM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED3ED7201C1FA7F2005AE413 /* Debug */,
+				ED3ED7211C1FA7F2005AE413 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED3ED7221C1FA7F2005AE413 /* Build configuration list for PBXNativeTarget "DaemonNVRAM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED3ED7231C1FA7F2005AE413 /* Debug */,
+				ED3ED7241C1FA7F2005AE413 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ED3ED70F1C1FA7F2005AE413 /* Project object */;
+}
