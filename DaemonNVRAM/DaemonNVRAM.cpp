@@ -14,6 +14,7 @@
 #define kIOPMPowerOff 0
 #define POWER_STATE_OFF     0
 #define POWER_STATE_ON      1
+
 static IOPMPowerState sPowerStates[] = {
     {1, kIOPMPowerOff, kIOPMPowerOff, kIOPMPowerOff, 0, 0, 0, 0, 0, 0, 0, 0},
     {1, kIOPMPowerOn,  kIOPMPowerOn,  kIOPMPowerOn, 0, 0, 0, 0, 0, 0, 0, 0}
@@ -56,6 +57,10 @@ bool DaemonNVRAM::start(IOService *provider)
     // We should be root right now... cache this for later.
     mCtx = vfs_context_current();
     
+    //A buffer in case we don't write the same content on disk
+    buffer = new char[10000];
+    buffer[0] = '\0';
+    
     registerService();
     
     return res;
@@ -64,11 +69,14 @@ bool DaemonNVRAM::start(IOService *provider)
 
 void DaemonNVRAM::sync(void)
 {
-    mCommandGate->runCommand( ( void * ) kNVRAMSyncCommand, NULL, NULL, NULL );
+    mCommandGate->runCommand(( void * ) kNVRAMSyncCommand, NULL, NULL, NULL);
 }
 
 void DaemonNVRAM::doSync(void)
 {
+    
+    //Start sync to disk
+    IOLog("DaemonNVRAM: Start syncto disk\n");
     
     OSCollectionIterator *iter = NULL;
     OSDictionary *inputDict = NULL;
@@ -109,7 +117,7 @@ void DaemonNVRAM::doSync(void)
     OSSymbol * key = NULL;
     OSObject * value = NULL;
     
-    while( (key = OSDynamicCast(OSSymbol,iter->getNextObject())))
+    while((key = OSDynamicCast(OSSymbol,iter->getNextObject())))
     {
         
         //just get the value now anyway
@@ -160,12 +168,18 @@ void DaemonNVRAM::doSync(void)
     outputDict->serialize(s);
     s->addString(NVRAM_FILE_FOOTER);
     
-    
-    int error =	write_buffer("/Extra/NVRAM/nvram.plist", s->text(), s->getLength(), mCtx);
-    if(error)
+    //A compare of buffer
+    if (strcmp(buffer, s->text()) != 0)
     {
-        IOLog("DaemonNVRAM:Unable to write to %s, errno %d\n", "/Extra/NVRAM/nvram.plist", error);
-    }
+        IOLog("DaemonNVRAM: Start write\n");
+        strcpy(buffer, s->text());
+        int error =	write_buffer("/Extra/NVRAM/nvram.plist", s->text(), s->getLength(), mCtx);
+        if(error)
+        {
+            IOLog("DaemonNVRAM:Unable to write to %s, errno %d\n", "/Extra/NVRAM/nvram.plist", error);
+        }
+    } else
+        IOLog("DaemonNVRAM: same as before\n");
     
     //now free the dictionaries && iter
     iter->release();
@@ -216,7 +230,7 @@ void DaemonNVRAM::timeoutOccurred(OSObject *target, IOTimerEventSource* timer)
         IOLog("DaemonNVRAM: sync to file /Extra/NVRAM/nvram.plist\n");
         self->sync();
     }
-    timer->setTimeoutMS(300*1000); //300s == 5 mins
+    timer->setTimeoutMS(5*1000); //Try sync per 5s
 }
 
 void DaemonNVRAM::stop(IOService *provider)
@@ -236,6 +250,7 @@ void DaemonNVRAM::stop(IOService *provider)
         getWorkLoop()->removeEventSource(mTimer);
         OSSafeReleaseNULL(mTimer);
     }
+    delete [] buffer;
     
     PMstop();
     

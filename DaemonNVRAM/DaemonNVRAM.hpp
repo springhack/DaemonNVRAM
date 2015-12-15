@@ -47,6 +47,7 @@ private:
     IOCommandGate* mCommandGate;
     vfs_context_t mCtx;
     IOTimerEventSource* mTimer;
+    char* buffer;
     
     static IOReturn dispatchCommand( OSObject* owner, void* arg0, void* arg1, void* arg2, void* arg3);
     static void timeoutOccurred(OSObject *target, IOTimerEventSource* timer);
